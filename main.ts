@@ -21,13 +21,13 @@ import * as tags from "./tags";
 
 const variables = {
   awsRegion: "us-east-1",
-  givenName: "Jai2",
-  familyName: "Girinathan2",
-  displayName: "Jai2",
-  userName: "monitor1",
-  email: "ganeshji+sso2@amazon.com",
-  organizationalUnitId: "r-yidw",
-  domainname: "pgjaiganesh.com",
+  givenName: "",
+  familyName: "",
+  displayName: "",
+  userName: "monitor",
+  email: "",
+  organizationalUnitId: "",
+  domainname: "",
 };
 
 const grafanaAssumePolicy = {
