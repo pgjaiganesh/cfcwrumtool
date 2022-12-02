@@ -140,7 +140,7 @@ class CDNCWRUMStack extends TerraformStack {
 
     const awsProvider = new aws.AwsProvider(this, util.format("%s-%s", prefix, "aws"), {
       region: variables.awsRegion,
-      profile: "fms_user",
+      // profile: "fms_user",
     });
 
     const bucket = new s3.S3Bucket(this, util.format("%s-%s", prefix, "bucket"), {
