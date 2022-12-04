@@ -21,13 +21,13 @@ import * as tags from "./tags";
 
 const variables = {
   awsRegion: "us-east-1",
-  givenName: "Jai2",
-  familyName: "Girinathan2",
-  displayName: "Jai2",
-  userName: "monitor1",
-  email: "ganeshji+sso2@amazon.com",
-  organizationalUnitId: "r-yidw",
-  domainname: "pgjaiganesh.com",
+  givenName: "",
+  familyName: "",
+  displayName: "",
+  userName: "monitor",
+  email: "",
+  organizationalUnitId: "",
+  domainname: "",
 };
 
 const grafanaAssumePolicy = {
@@ -140,7 +140,7 @@ class CDNCWRUMStack extends TerraformStack {
 
     const awsProvider = new aws.AwsProvider(this, util.format("%s-%s", prefix, "aws"), {
       region: variables.awsRegion,
-      profile: "fms_user",
+      // profile: "fms_user",
     });
 
     const bucket = new s3.S3Bucket(this, util.format("%s-%s", prefix, "bucket"), {
