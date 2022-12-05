@@ -3,4 +3,4 @@
 # export AWS_SECRET_ACCESS_KEY=
 # npm install
 # cdktf provider add "aws@~>4.0" random
-cdktf deploy
+cdktf deploy --outputs-file output.json

@@ -19,15 +19,26 @@ import * as tags from "./tags";
 // import * as glob from 'glob';
 // import * as mime from 'mime-types';
 
+// const variables = {
+//   awsRegion: "us-east-1",
+//   givenName: "",
+//   familyName: "",
+//   displayName: "",
+//   userName: "monitor",
+//   email: "",
+//   organizationalUnitId: "",
+//   domainname: "",
+// };
+
 const variables = {
   awsRegion: "us-east-1",
-  givenName: "",
-  familyName: "",
-  displayName: "",
-  userName: "monitor",
-  email: "",
-  organizationalUnitId: "",
-  domainname: "",
+  givenName: "Jai2",
+  familyName: "Girinathan2",
+  displayName: "Jai2",
+  userName: "monitor1",
+  email: "ganeshji+sso2@amazon.com",
+  organizationalUnitId: "r-yidw",
+  domainname: "pgjaiganesh.com",
 };
 
 const grafanaAssumePolicy = {
@@ -288,11 +299,11 @@ class CDNCWRUMStack extends TerraformStack {
     });
 
     new TerraformOutput(this, util.format("%s-%s", prefix, "username"), {
-      value: userObj.userName
+      value: userObj.userName,
     });
 
     new TerraformOutput(this, util.format("%s-%s", prefix, "cwrummonitor"), {
-      value: cwrumMonitor
+      value: cwrumMonitor,
     });
   }
 };
