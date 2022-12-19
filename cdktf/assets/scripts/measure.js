@@ -40,9 +40,9 @@ const handleEntry = (entry) => {
     let metric = {};
     if (entry.serverTiming.length > 0) {
         metric['type'] = entry.initiatorType;
-        let cdn = entry.serverTiming.find(el => el.name === 'cdn');
+        let cdn = entry.serverTiming.find(el => el.name === 'cdn-rid');
         if (cdn) {
-            metric['cdn'] = cdn?.description;
+            metric['cdn'] = "cloudfront";
             metric['cachestatus'] = entry.serverTiming.find(el => el.name === 'cdn-cache-miss') ? "MISS" : "HIT";
         }
         else {
